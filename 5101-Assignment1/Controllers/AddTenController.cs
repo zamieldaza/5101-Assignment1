@@ -9,8 +9,12 @@ namespace _5101_Assignment1.Controllers
 {
     public class AddTenController : ApiController
     {
-        // Input : Integer
-        // Output : 10 more than the integer input
+        /// <summary>
+        /// This method returns 10 more than the integer input {id} when receiving a get request
+        /// <example>GET api/addten/{id}</example>
+        /// </summary>
+        /// <param name="id">Integer</param>
+        /// <returns>id+10</returns>
         public int Get(int id)
         {
             int tenMore = id + 10;

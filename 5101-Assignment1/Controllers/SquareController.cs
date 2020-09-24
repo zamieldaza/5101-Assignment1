@@ -9,8 +9,12 @@ namespace _5101_Assignment1.Controllers
 {
     public class SquareController : ApiController
     {
-        // Input : Integer
-        // Output : Square of the integer input
+        /// <summary>
+        /// This method returns the square of the integer input {id} when receiving a get request
+        /// <example>GET api/square/{id}</example>
+        /// </summary>
+        /// <param name="id">Integer</param>
+        /// <returns>id*id</returns>
         public int Get(int id)
         {
             int square = id * id;

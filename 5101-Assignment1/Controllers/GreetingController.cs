@@ -9,15 +9,23 @@ namespace _5101_Assignment1.Controllers
 {
     public class GreetingController : ApiController
     {
-        // Output : "Hello World!"
+        /// <summary>
+        /// This method returns a string when receiving a post request
+        /// <example>POST api/greeting</example>
+        /// </summary>
+        /// <returns>"Hello World!"</returns>
         public string Post()
         {
             string greeting = "Hello World!";
             return greeting;
         }
 
-        // Input : Integer id
-        // Output : "Greetings to id people!"
+        /// <summary>
+        /// This method returns a string when receiving a post request
+        /// <example>GET api/greeting/{id}</example>
+        /// </summary>
+        /// <param name="id">Integer</param>
+        /// <returns>"Greetings to id people!"</returns>
         public string Get(int id)
         {
             string greeting = "Greetings to " + id + " people!";
