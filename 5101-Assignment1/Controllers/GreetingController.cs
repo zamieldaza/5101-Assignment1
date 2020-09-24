@@ -21,7 +21,7 @@ namespace _5101_Assignment1.Controllers
         }
 
         /// <summary>
-        /// This method returns a string when receiving a post request
+        /// This method returns a string combined with an integer input {id} when receiving a post request
         /// <example>GET api/greeting/{id}</example>
         /// </summary>
         /// <param name="id">Integer</param>

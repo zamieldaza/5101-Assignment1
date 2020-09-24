@@ -9,8 +9,6 @@ namespace _5101_Assignment1.Controllers
 {
     public class HostingCostController : ApiController
     {
-        // Input : Integer
-        // Output : Integer input divided by 14
         /// <summary>
         /// This method returns three strings that represent the web hosting cost of a number of days {id} when receiving a host request
         /// Rate $5.50/FN (fortnight = 14 days)
@@ -25,16 +23,16 @@ namespace _5101_Assignment1.Controllers
         /// </returns>
         public IEnumerable<string> Get(int id)
         {
-            // Number of fortnights
+            // Number of fortnights (+1 for base charge)
             int division = id/14;
             int fortnights = division + 1;
-            // Subtotal
+            // Subtotal rounded to two decimal places
             double subtotal = Math.Round(fortnights*5.50,2);
-            // Tax
+            // Tax rounded to two decimal places
             double tax = Math.Round(subtotal * 0.13, 2);
-            // Total
+            // Total rounded to two decimal places
             double total = Math.Round(subtotal + tax, 2);
-            // String lines
+            // String lines with formatted numbers
             string line1 = division + " fortnights at $5,50/FN = $" + subtotal.ToString("0.00") + " CAD";
             string line2 = "HST 13% = $" + tax.ToString("0.00") + " CAD";
             string line3 = "Total = $" + total.ToString("0.00") + " CAD";
