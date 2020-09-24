@@ -35,9 +35,9 @@ namespace _5101_Assignment1.Controllers
             // Total
             double total = Math.Round(subtotal + tax, 2);
             // String lines
-            string line1 = division + " fortnights at $5.50/FN = $" + subtotal + " CAD";
-            string line2 = "HST 13% = $" + tax + " CAD";
-            string line3 = "Total = $" + total + " CAD";
+            string line1 = division + " fortnights at $5,50/FN = $" + subtotal.ToString("0.00") + " CAD";
+            string line2 = "HST 13% = $" + tax.ToString("0.00") + " CAD";
+            string line3 = "Total = $" + total.ToString("0.00") + " CAD";
             // Final result
             return new string[] { line1, line2, line3};
         }
